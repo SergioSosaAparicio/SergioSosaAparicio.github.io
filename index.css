@@ -1,0 +1,285 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100%;
+  background: rgb(0, 0, 0);
+  font-family: sans-serif;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0%;
+}
+
+main{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.contenedor_principal{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 30px; 
+  margin: 5%;
+  padding: 20px;
+}
+  
+.cabecera_usuario {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  border: 4px solid white;
+  border-radius: 20%;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+}
+
+.img_cabecera {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  border-radius: 20% 20% 0% 0%;
+  background-image: url(/img/fondoCiudad.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.foto_perfil {
+  position: absolute;
+  width: 40%;
+  aspect-ratio: 1 / 1;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  overflow: hidden;
+  background-image: url(/img/fotoPerfil.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mi_nombre{
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  height: 12%;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.texto {
+  font-size: 50px;
+  position: absolute;
+  bottom: 35%;
+  left: 50;
+  height: 15%;
+  text-align: center;
+  color: white;
+}
+
+.menu_botones{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 250px;
+  padding: 10px;
+  border-radius: 10%;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8); 
+  position: relative; 
+  z-index: 1; 
+}
+
+.boton{
+  display: flex;
+  margin-top: 7%;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 70px;
+  border-radius: 3%;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.boton:hover {
+  background-color: transparent;
+  color: white;
+  border: 2px double white;
+}
+
+@media (max-width: 768px){
+  .contenedor_principal{
+    flex-direction: column;
+  }
+
+.menu_botones {
+  width: 50%;
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+
+.cabecera_usuario {
+  border-radius: 20%;
+}
+
+.foto_perfil {
+  width: 40%;
+}
+
+h1 {
+  font-size: 200%;
+}
+}
+
+.github {
+  border-style: none;
+  position: absolute;
+  width: 7%;
+  aspect-ratio: 1 / 1;
+  top: 89%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background-image: url(/img/icono\ github.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+.linkedin {
+  position: absolute;
+  width: 7%;
+  aspect-ratio: 1 / 1;
+  top: 89%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background-image: url(/img/icono\ Linkedin.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+.gmail {
+  position: absolute;
+  width: 7%;
+  aspect-ratio: 1 / 1;
+  top: 89%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background-image: url(/img/icono\ gmail.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+.Contenedor_Curriculum { 
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 30px; 
+  margin: 5%;
+  padding: 20px;
+  z-index: 1; 
+}
+
+.Imagen_Curriculum {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px;
+  border-radius: 2%;
+  transition: transform 0.3s ease;
+}
+
+.Contenedor_Curriculum img:hover {
+  transform: scale(1.1);
+  border: 2px solid white;
+}
+
+.Contenedor_Lenguajes{
+  max-width: 500px;
+  background-color: white;
+  border-radius: 3%;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 30px; 
+  margin: 5%;
+  padding: 20px;
+  z-index: 1; 
+}
+
+.Img_Lenguajes{
+  width: 30%;
+  max-width: 500px;
+  margin: 20px;
+  border-radius: 2%;
+  transition: transform 0.3s ease;
+}
+
+.Contenedor_Lenguajes img:hover {
+  transform: scale(1.1);
+}
+
+.Contenedor_SobreMi{
+  width: 80%;
+  height: 50%;
+  background-color: transparent;
+  border-radius: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 30px; 
+  margin: 5%;
+  padding: 20px;
+  z-index: 1; 
+}
+
+.Texto_SobreMi{
+  font-size: 18px;
+  max-width: 500px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  color: white;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+
+}
+
+.Contenedor_SobreMi p:hover {
+  transform: scale(1.1);
+}
